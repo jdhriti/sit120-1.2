@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Concepts Implementation</title>
+</head>
+<body>
+  <h1 style=" text-align: center;">JavaScript Concepts Implementation</h1>
+  <div id="output"></div>
+
+  <script>
+    // String methods
+    const text = "SIT120, Responsive Web Apps";
+    appendOutput("toUpperCase: " + text.toUpperCase());
+    appendOutput("toLowerCase: " + text.toLowerCase());
+    appendOutput("charAt: " + text.charAt(7));
+    appendOutput("indexOf: " + text.indexOf("World"));
+    appendOutput("substring: " + text.substring(7, 12));
+
+    // Number methods
+    const num = 120.12;
+    appendOutput("toFixed: " + num.toFixed(2));
+    appendOutput("toExponential: " + num.toExponential(2));
+    appendOutput("parseInt: " + parseInt("224"));
+    appendOutput("parseFloat: " + parseFloat("6.626"));
+    appendOutput("isNaN: " + isNaN(num));
+
+    // Array methods
+    const arr = [120, 224, 182, "dhriti", 201];
+    appendOutput("length: " + arr.length);
+    appendOutput("push: " + arr.push(42));
+    appendOutput("pop: " + arr.pop());
+    appendOutput("join: " + arr.join("-"));
+    appendOutput("indexOf: " + arr.indexOf("dhriti"));
+
+    // Date methods
+    const now = new Date();
+    appendOutput("getFullYear: " + now.getFullYear());
+    appendOutput("getMonth: " + now.getMonth());
+    appendOutput("getDate: " + now.getDate());
+    appendOutput("getHours: " + now.getHours());
+    appendOutput("getSeconds: " + now.getSeconds());
+
+    // Function methods
+    function subject(sname) 
+    {
+      appendOutput("The subject is, " + sname );
+    }
+
+    const student = (sname) => {
+      appendOutput(`Hello student, ${sname}!`);
+    };
+
+    subject("SIT120 Responsive Web Apps");
+    student("Dhriti Jain");
+
+    function appendOutput(text) 
+    {
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerHTML += text + "<br>";
+    }
+  </script>
+</body>
+</html>
